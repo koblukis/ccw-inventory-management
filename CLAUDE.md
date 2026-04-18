@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Factory Inventory Management System Demo with GitHub integration - Full-stack application with Vue 3 frontend, Python FastAPI backend, and in-memory mock data (no database)..
+Factory Inventory Management System Demo with GitHub integration - Full-stack application with Vue 3 frontend, Python FastAPI backend, and in-memory mock data (no database).
 
 ## Critical Tool Usage Rules
 
@@ -31,16 +31,13 @@ Use the Task tool with these specialized subagents for appropriate tasks:
 ## Quick Start
 
 ```bash
-# Backend (requires uv: curl -LsSf https://astral.sh/uv/install.sh | sh)
+# Backend
 cd server
 uv run python main.py
-# Runs at http://localhost:8001 — API docs at http://localhost:8001/docs
 
 # Frontend
 cd client
-npm install  # first time only
-npm run dev
-# Runs at http://localhost:3000
+npm install && npm run dev
 ```
 
 ## Key Patterns
