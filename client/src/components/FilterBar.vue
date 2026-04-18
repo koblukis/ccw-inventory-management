@@ -3,7 +3,7 @@
     <div class="flex items-center gap-3 flex-1">
       <div class="flex items-center gap-2">
         <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide mr-1">{{ t('filters.timePeriod') }}</label>
-        <select v-model="selectedPeriod" class="border border-slate-300 rounded-lg text-sm text-slate-700 px-3 py-1.5 bg-white focus:outline-none focus:ring-2 focus:ring-violet-400 focus:border-transparent cursor-pointer hover:border-slate-400 transition-colors">
+        <select v-model="selectedPeriod" class="border border-slate-300 rounded-lg text-sm text-slate-700 px-3 py-1.5 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent cursor-pointer hover:border-slate-400 transition-colors">
           <option value="all">{{ t('filters.allMonths') }}</option>
           <option value="2025-01">{{ t('months.january') }}</option>
           <option value="2025-02">{{ t('months.february') }}</option>
@@ -22,7 +22,7 @@
 
       <div class="flex items-center gap-2">
         <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide mr-1">{{ t('filters.location') }}</label>
-        <select v-model="selectedLocation" class="border border-slate-300 rounded-lg text-sm text-slate-700 px-3 py-1.5 bg-white focus:outline-none focus:ring-2 focus:ring-violet-400 focus:border-transparent cursor-pointer hover:border-slate-400 transition-colors">
+        <select v-model="selectedLocation" class="border border-slate-300 rounded-lg text-sm text-slate-700 px-3 py-1.5 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent cursor-pointer hover:border-slate-400 transition-colors">
           <option value="all">{{ t('filters.all') }}</option>
           <option value="San Francisco">{{ t('warehouses.sanFrancisco') }}</option>
           <option value="London">{{ t('warehouses.london') }}</option>
@@ -32,7 +32,7 @@
 
       <div class="flex items-center gap-2">
         <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide mr-1">{{ t('filters.category') }}</label>
-        <select v-model="selectedCategory" class="border border-slate-300 rounded-lg text-sm text-slate-700 px-3 py-1.5 bg-white focus:outline-none focus:ring-2 focus:ring-violet-400 focus:border-transparent cursor-pointer hover:border-slate-400 transition-colors">
+        <select v-model="selectedCategory" class="border border-slate-300 rounded-lg text-sm text-slate-700 px-3 py-1.5 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent cursor-pointer hover:border-slate-400 transition-colors">
           <option value="all">{{ t('filters.all') }}</option>
           <option value="circuit boards">{{ t('categories.circuitBoards') }}</option>
           <option value="sensors">{{ t('categories.sensors') }}</option>
@@ -44,7 +44,7 @@
 
       <div class="flex items-center gap-2">
         <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide mr-1">{{ t('filters.orderStatus') }}</label>
-        <select v-model="selectedStatus" class="border border-slate-300 rounded-lg text-sm text-slate-700 px-3 py-1.5 bg-white focus:outline-none focus:ring-2 focus:ring-violet-400 focus:border-transparent cursor-pointer hover:border-slate-400 transition-colors">
+        <select v-model="selectedStatus" class="border border-slate-300 rounded-lg text-sm text-slate-700 px-3 py-1.5 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent cursor-pointer hover:border-slate-400 transition-colors">
           <option value="all">{{ t('filters.all') }}</option>
           <option value="delivered">{{ t('status.delivered') }}</option>
           <option value="shipped">{{ t('status.shipped') }}</option>

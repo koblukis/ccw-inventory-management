@@ -23,7 +23,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="(q, index) in quarterlyData" :key="index" class="border-b border-slate-100 hover:bg-purple-50 transition-colors">
+              <tr v-for="(q, index) in quarterlyData" :key="index" class="border-b border-slate-100 hover:bg-blue-50 transition-colors">
                 <td class="py-3 px-4 text-slate-700"><strong>{{ q.quarter }}</strong></td>
                 <td class="py-3 px-4 text-slate-700">{{ q.total_orders }}</td>
                 <td class="py-3 px-4 text-slate-700">${{ formatNumber(q.total_revenue) }}</td>
@@ -59,7 +59,7 @@
               <div class="flex items-end w-full" style="height: 200px;">
                 <div
                   class="w-full rounded-t-md cursor-pointer transition-all duration-300"
-                  style="background: linear-gradient(to top, #4f46e5, #818cf8);"
+                  style="background: linear-gradient(to top, #2563eb, #60a5fa);"
                   :style="{ height: getBarHeight(month.revenue) + 'px' }"
                   :title="'$' + formatNumber(month.revenue)"
                 ></div>
@@ -85,7 +85,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="(month, index) in monthlyData" :key="index" class="border-b border-slate-100 hover:bg-purple-50 transition-colors">
+              <tr v-for="(month, index) in monthlyData" :key="index" class="border-b border-slate-100 hover:bg-blue-50 transition-colors">
                 <td class="py-3 px-4 text-slate-700"><strong>{{ formatMonth(month.month) }}</strong></td>
                 <td class="py-3 px-4 text-slate-700">{{ month.order_count }}</td>
                 <td class="py-3 px-4 text-slate-700">${{ formatNumber(month.revenue) }}</td>
@@ -121,19 +121,19 @@
 
       <!-- Summary Stats -->
       <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mt-6">
-        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5 border-l-4 border-l-violet-400">
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5 border-l-4 border-l-blue-400">
           <div class="text-sm text-slate-500 mb-1">Total Revenue (YTD)</div>
           <div class="text-3xl font-bold text-slate-900">${{ formatNumber(totalRevenue) }}</div>
         </div>
-        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5 border-l-4 border-l-violet-400">
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5 border-l-4 border-l-blue-400">
           <div class="text-sm text-slate-500 mb-1">Avg Monthly Revenue</div>
           <div class="text-3xl font-bold text-slate-900">${{ formatNumber(avgMonthlyRevenue) }}</div>
         </div>
-        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5 border-l-4 border-l-violet-400">
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5 border-l-4 border-l-blue-400">
           <div class="text-sm text-slate-500 mb-1">Total Orders (YTD)</div>
           <div class="text-3xl font-bold text-slate-900">{{ totalOrders }}</div>
         </div>
-        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5 border-l-4 border-l-violet-400">
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5 border-l-4 border-l-blue-400">
           <div class="text-sm text-slate-500 mb-1">Best Performing Quarter</div>
           <div class="text-3xl font-bold text-slate-900">{{ bestQuarter }}</div>
         </div>

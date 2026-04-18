@@ -84,7 +84,7 @@
           <h3 class="text-base font-semibold text-slate-800">{{ t('finance.monthlyCostFlow.title') }}</h3>
           <div class="flex gap-6 text-sm">
             <span class="flex items-center gap-2 text-slate-500"><span class="inline-block w-3 h-3 rounded-sm bg-blue-500"></span>{{ t('finance.monthlyCostFlow.procurement') }}</span>
-            <span class="flex items-center gap-2 text-slate-500"><span class="inline-block w-3 h-3 rounded-sm bg-violet-500"></span>{{ t('finance.monthlyCostFlow.operational') }}</span>
+            <span class="flex items-center gap-2 text-slate-500"><span class="inline-block w-3 h-3 rounded-sm bg-blue-400"></span>{{ t('finance.monthlyCostFlow.operational') }}</span>
             <span class="flex items-center gap-2 text-slate-500"><span class="inline-block w-3 h-3 rounded-sm bg-emerald-500"></span>{{ t('finance.monthlyCostFlow.labor') }}</span>
             <span class="flex items-center gap-2 text-slate-500"><span class="inline-block w-3 h-3 rounded-sm bg-amber-500"></span>{{ t('finance.monthlyCostFlow.overhead') }}</span>
           </div>
@@ -106,7 +106,7 @@
                   @click="showCostDetail(month)"
                 >
                   <div class="w-full bg-blue-500 transition-all duration-300 cursor-pointer rounded-b-md" :style="{ height: getBarHeight(month.procurement) + '%' }" :title="`Procurement: ${currencySymbol}${month.procurement.toLocaleString()}`"></div>
-                  <div class="w-full bg-violet-500 transition-all duration-300 cursor-pointer" :style="{ height: getBarHeight(month.operational) + '%' }" :title="`Operational: ${currencySymbol}${month.operational.toLocaleString()}`"></div>
+                  <div class="w-full bg-blue-400 transition-all duration-300 cursor-pointer" :style="{ height: getBarHeight(month.operational) + '%' }" :title="`Operational: ${currencySymbol}${month.operational.toLocaleString()}`"></div>
                   <div class="w-full bg-emerald-500 transition-all duration-300 cursor-pointer" :style="{ height: getBarHeight(month.labor) + '%' }" :title="`Labor: ${currencySymbol}${month.labor.toLocaleString()}`"></div>
                   <div class="w-full bg-amber-500 transition-all duration-300 cursor-pointer rounded-t-md" :style="{ height: getBarHeight(month.overhead) + '%' }" :title="`Overhead: ${currencySymbol}${month.overhead.toLocaleString()}`"></div>
                 </div>
@@ -150,7 +150,7 @@
           <h3 class="text-base font-semibold text-slate-800 mb-4">{{ t('finance.transactions.title') }}</h3>
           <div class="overflow-y-auto max-h-[400px]">
             <table class="w-full text-sm border-collapse">
-              <thead class="sticky top-0 bg-purple-50 z-10">
+              <thead class="sticky top-0 bg-blue-50 z-10">
                 <tr class="border-b border-slate-200">
                   <th class="text-left text-xs font-semibold text-slate-500 uppercase tracking-wide py-3 px-4">{{ t('finance.transactions.id') }}</th>
                   <th class="text-left text-xs font-semibold text-slate-500 uppercase tracking-wide py-3 px-4">{{ t('finance.transactions.description') }}</th>

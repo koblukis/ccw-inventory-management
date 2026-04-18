@@ -16,7 +16,7 @@
           <div class="flex-1 overflow-y-auto px-6 py-5">
 
             <!-- Add Task Form -->
-            <div class="bg-purple-50 rounded-xl p-5 mb-6">
+            <div class="bg-blue-50 rounded-xl p-5 mb-6">
               <div class="flex gap-3 mb-3">
                 <div class="flex flex-col gap-1.5 flex-1">
                   <label for="task-title" class="text-sm font-semibold text-slate-600">{{ t('tasks.taskTitle') }}</label>
@@ -25,7 +25,7 @@
                     v-model="newTask.title"
                     type="text"
                     :placeholder="t('tasks.taskTitlePlaceholder')"
-                    class="flex-1 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-violet-400 focus:border-transparent"
+                    class="flex-1 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
                     @keyup.enter="handleAddTask"
                   />
                 </div>
@@ -37,7 +37,7 @@
                   <select
                     id="task-priority"
                     v-model="newTask.priority"
-                    class="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-violet-400 focus:border-transparent bg-white cursor-pointer"
+                    class="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent bg-white cursor-pointer"
                   >
                     <option value="high">{{ t('priority.high') }}</option>
                     <option value="medium">{{ t('priority.medium') }}</option>
@@ -51,13 +51,13 @@
                     id="task-due-date"
                     v-model="newTask.dueDate"
                     type="date"
-                    class="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-violet-400 focus:border-transparent"
+                    class="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
                   />
                 </div>
 
                 <button
                   @click="handleAddTask"
-                  class="bg-violet-400 hover:bg-violet-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  class="bg-blue-400 hover:bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   :disabled="!newTask.title.trim() || !newTask.dueDate"
                 >
                   {{ t('tasks.addTask') }}
@@ -90,7 +90,7 @@
                       type="checkbox"
                       :checked="task.status === 'completed'"
                       @change="$emit('toggle-task', task.id)"
-                      class="accent-violet-400 w-4 h-4 shrink-0 cursor-pointer"
+                      class="accent-blue-400 w-4 h-4 shrink-0 cursor-pointer"
                     />
                     <span
                       class="flex-1 cursor-pointer select-none text-slate-900 text-base font-semibold leading-snug"

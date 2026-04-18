@@ -50,7 +50,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="item in backlogItems" :key="item.id" class="border-b border-slate-100 hover:bg-purple-50 transition-colors">
+              <tr v-for="item in backlogItems" :key="item.id" class="border-b border-slate-100 hover:bg-blue-50 transition-colors">
                 <td class="py-3 px-4 text-slate-700"><strong>{{ item.order_id }}</strong></td>
                 <td class="py-3 px-4 text-slate-700"><strong>{{ item.item_sku }}</strong></td>
                 <td class="py-3 px-4 text-slate-700">{{ item.item_name }}</td>

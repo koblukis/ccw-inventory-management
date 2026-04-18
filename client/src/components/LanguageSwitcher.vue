@@ -36,8 +36,8 @@
         :key="locale"
         class="flex items-center justify-between gap-3 px-4 py-3 text-sm transition-colors cursor-pointer w-full border-none text-left font-[inherit] font-medium"
         :class="currentLocale === locale
-          ? 'text-violet-600 bg-violet-100'
-          : 'text-slate-700 bg-transparent hover:bg-purple-50'"
+          ? 'text-blue-600 bg-blue-100'
+          : 'text-slate-700 bg-transparent hover:bg-blue-50'"
         @mousedown.prevent="selectLanguage(locale)"
       >
         <span class="flex-1">{{ getLanguageName(locale) }}</span>
@@ -47,7 +47,7 @@
           height="18"
           viewBox="0 0 18 18"
           fill="none"
-          class="text-violet-600 shrink-0"
+          class="text-blue-600 shrink-0"
         >
           <path d="M4 9L7.5 12.5L14 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>

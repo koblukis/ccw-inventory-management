@@ -61,7 +61,7 @@
               <tr
                 v-for="order in orders"
                 :key="order.id"
-                class="border-b border-slate-100 hover:bg-violet-100 transition-colors cursor-pointer"
+                class="border-b border-slate-100 hover:bg-blue-100 transition-colors cursor-pointer"
               >
                 <td class="py-3 px-4 text-slate-700">
                   <strong>{{ order.order_number }}</strong>
@@ -69,7 +69,7 @@
                 <td class="py-3 px-4 text-slate-700">{{ translateCustomerName(order.customer) }}</td>
                 <td class="py-3 px-4 text-slate-700">
                   <details class="relative">
-                    <summary class="text-violet-600 hover:text-violet-700 text-sm font-medium cursor-pointer list-none select-none inline-block">
+                    <summary class="text-blue-600 hover:text-blue-700 text-sm font-medium cursor-pointer list-none select-none inline-block">
                       {{ t('orders.itemsCount', { count: order.items.length }) }}
                     </summary>
                     <div class="absolute z-10 bg-white border border-slate-200 rounded-xl shadow-lg p-3 mt-1 w-64">
