@@ -31,13 +31,16 @@ Use the Task tool with these specialized subagents for appropriate tasks:
 ## Quick Start
 
 ```bash
-# Backend
+# Backend (requires uv: curl -LsSf https://astral.sh/uv/install.sh | sh)
 cd server
 uv run python main.py
+# Runs at http://localhost:8001 — API docs at http://localhost:8001/docs
 
 # Frontend
 cd client
-npm install && npm run dev
+npm install  # first time only
+npm run dev
+# Runs at http://localhost:3000
 ```
 
 ## Key Patterns
