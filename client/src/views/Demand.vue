@@ -35,9 +35,9 @@
         </div>
 
         <!-- Stable -->
-        <div class="bg-violet-100 border border-violet-200 rounded-xl p-4 hover:shadow-md transition-shadow duration-200">
-          <div class="flex items-center gap-4 mb-4 pb-4 border-b border-indigo-100">
-            <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-violet-100 text-violet-700 text-2xl font-bold flex-shrink-0">→</div>
+        <div class="bg-blue-100 border border-blue-200 rounded-xl p-4 hover:shadow-md transition-shadow duration-200">
+          <div class="flex items-center gap-4 mb-4 pb-4 border-b border-blue-100">
+            <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-700 text-2xl font-bold flex-shrink-0">→</div>
             <div>
               <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide">{{ t('demand.stableDemand') }}</div>
               <div class="text-2xl font-bold text-slate-900 mt-0.5">{{ t('demand.itemsCount', { count: getForecastsByTrend('stable').length }) }}</div>
@@ -50,7 +50,7 @@
               class="flex justify-between items-center px-3 py-2 bg-white/70 rounded-md hover:bg-white transition-colors"
             >
               <span class="text-sm text-slate-900 font-medium flex-1 truncate mr-4">{{ item.item_name }}</span>
-              <span class="text-xs font-bold text-violet-600 flex-shrink-0">{{ getChangePercent(item) }}%</span>
+              <span class="text-xs font-bold text-blue-600 flex-shrink-0">{{ getChangePercent(item) }}%</span>
             </div>
             <div v-if="getForecastsByTrend('stable').length > 5" class="text-xs text-slate-500 italic text-center py-1">
               +{{ getForecastsByTrend('stable').length - 5 }} {{ t('demand.more') }}
@@ -100,7 +100,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="forecast in forecasts" :key="forecast.id" class="border-b border-slate-100 hover:bg-purple-50 transition-colors">
+              <tr v-for="forecast in forecasts" :key="forecast.id" class="border-b border-slate-100 hover:bg-blue-50 transition-colors">
                 <td class="py-3 px-4 text-slate-700"><strong>{{ forecast.item_sku }}</strong></td>
                 <td class="py-3 px-4 text-slate-700">{{ forecast.item_name }}</td>
                 <td class="py-3 px-4 text-slate-700">{{ forecast.current_demand }}</td>

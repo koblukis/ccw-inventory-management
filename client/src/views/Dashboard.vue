@@ -19,7 +19,7 @@
             <div class="text-3xl font-bold text-slate-900 tabular-nums">4.2</div>
             <div class="text-xs text-slate-500 mt-1 mb-3">{{ t('dashboard.kpi.goal') }}: 4.5 (-6.67%)</div>
             <div class="bg-slate-100 rounded-full h-1.5 mt-3">
-              <div class="bg-violet-1000 rounded-full h-1.5" style="width: 93.33%"></div>
+              <div class="bg-blue-500 rounded-full h-1.5" style="width: 93.33%"></div>
             </div>
           </div>
 
@@ -30,7 +30,7 @@
             <div class="text-3xl font-bold text-slate-900 tabular-nums">{{ ordersData.fulfilled }}</div>
             <div class="text-xs text-slate-500 mt-1 mb-3">{{ t('dashboard.kpi.goal') }}: {{ ordersData.goal }} ({{ calculatePercentage(ordersData.fulfilled, ordersData.goal) }}%)</div>
             <div class="bg-slate-100 rounded-full h-1.5 mt-3">
-              <div class="bg-violet-1000 rounded-full h-1.5" :style="{ width: calculatePercentage(ordersData.fulfilled, ordersData.goal) + '%' }"></div>
+              <div class="bg-blue-500 rounded-full h-1.5" :style="{ width: calculatePercentage(ordersData.fulfilled, ordersData.goal) + '%' }"></div>
             </div>
           </div>
 
@@ -52,7 +52,7 @@
             <div class="text-3xl font-bold text-slate-900 tabular-nums">{{ formatCurrency(Math.round(summary.total_orders_value), selectedCurrency) }}</div>
             <div class="text-xs text-slate-500 mt-1 mb-3">{{ t('dashboard.kpi.goal') }}: {{ formatCurrency(revenueGoal, selectedCurrency) }} ({{ summary.total_orders_value > revenueGoal ? '+' : '' }}{{ ((summary.total_orders_value / revenueGoal - 1) * 100).toFixed(1) }}%)</div>
             <div class="bg-slate-100 rounded-full h-1.5 mt-3">
-              <div class="bg-violet-1000 rounded-full h-1.5" :style="{ width: Math.min((summary.total_orders_value / revenueGoal * 100), 100) + '%' }"></div>
+              <div class="bg-blue-500 rounded-full h-1.5" :style="{ width: Math.min((summary.total_orders_value / revenueGoal * 100), 100) + '%' }"></div>
             </div>
           </div>
 
@@ -156,7 +156,7 @@
             <div class="flex flex-col gap-6 px-4" v-if="categoryData.length > 0">
               <div v-for="cat in categoryData" :key="cat.name" class="flex items-center gap-4">
                 <div class="w-[120px] min-w-[120px] text-sm font-semibold text-slate-600 shrink-0">{{ translateCategory(cat.name) }}</div>
-                <div class="flex-1 h-8 bg-purple-50 rounded-md overflow-hidden">
+                <div class="flex-1 h-8 bg-blue-50 rounded-md overflow-hidden">
                   <div
                     class="h-full flex items-center justify-end pr-3 transition-all duration-500"
                     :style="{ width: (cat.value / maxCategoryValue * 100) + '%', background: cat.color }"
@@ -200,7 +200,7 @@
                 <tr
                   v-for="item in backlogItems"
                   :key="item.id"
-                  class="border-b border-slate-100 hover:bg-violet-100 transition-colors"
+                  class="border-b border-slate-100 hover:bg-blue-100 transition-colors"
                 >
                   <td class="py-3 px-4 text-slate-700 cursor-pointer font-semibold" @click="showBacklogDetail(item)">{{ item.order_id }}</td>
                   <td class="py-3 px-4 text-slate-700 cursor-pointer font-semibold" @click="showBacklogDetail(item)">{{ item.item_sku }}</td>
@@ -233,7 +233,7 @@
                     <button
                       v-if="!item.purchase_order_id"
                       @click.stop="openPOModal(item)"
-                      class="bg-violet-400 hover:bg-violet-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors whitespace-nowrap"
+                      class="bg-blue-400 hover:bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors whitespace-nowrap"
                     >
                       Create PO
                     </button>
@@ -273,7 +273,7 @@
                 <tr
                   v-for="item in topProducts"
                   :key="item.sku"
-                  class="border-b border-slate-100 hover:bg-violet-100 transition-colors cursor-pointer"
+                  class="border-b border-slate-100 hover:bg-blue-100 transition-colors cursor-pointer"
                   @click="showProductDetail(item)"
                 >
                   <td class="py-3 px-4 text-slate-700 font-semibold">{{ translateProductName(item.name) }}</td>

@@ -19,7 +19,7 @@
               v-model="searchQuery"
               type="text"
               :placeholder="t('inventory.searchPlaceholder')"
-              class="w-full border border-slate-300 rounded-lg pl-10 pr-10 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-violet-400 focus:border-transparent bg-white"
+              class="w-full border border-slate-300 rounded-lg pl-10 pr-10 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent bg-white"
             />
             <button
               v-if="searchQuery"
@@ -52,7 +52,7 @@
               <tr
                 v-for="item in filteredItems"
                 :key="item.id"
-                class="border-b border-slate-100 hover:bg-violet-100 transition-colors cursor-pointer"
+                class="border-b border-slate-100 hover:bg-blue-100 transition-colors cursor-pointer"
                 @click="showItemDetail(item)"
               >
                 <td class="py-3 px-4 text-slate-700"><strong>{{ item.sku }}</strong></td>

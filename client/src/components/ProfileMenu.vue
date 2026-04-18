@@ -5,7 +5,7 @@
       @click="toggleDropdown"
       @blur="handleBlur"
     >
-      <div class="w-8 h-8 rounded-full bg-gradient-to-br from-violet-400 to-violet-500 flex items-center justify-center text-white text-xs font-bold">
+      <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-500 flex items-center justify-center text-white text-xs font-bold">
         {{ getInitials(currentUser.name) }}
       </div>
       <span class="text-sm font-medium text-slate-900">{{ currentUser.name }}</span>
@@ -23,8 +23,8 @@
 
     <div v-if="isDropdownOpen" class="absolute right-0 top-full mt-2 w-64 bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden z-[1000]">
 
-      <div class="flex items-center gap-3 px-4 py-4 bg-purple-50">
-        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-violet-400 to-violet-500 flex items-center justify-center text-white text-base font-bold shrink-0">
+      <div class="flex items-center gap-3 px-4 py-4 bg-blue-50">
+        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-500 flex items-center justify-center text-white text-base font-bold shrink-0">
           {{ getInitials(currentUser.name) }}
         </div>
         <div class="flex-1 min-w-0">
@@ -36,7 +36,7 @@
       <div class="h-px bg-slate-200 my-1"></div>
 
       <button
-        class="flex items-center gap-3 px-4 py-3 text-sm text-slate-700 hover:bg-purple-50 transition-colors cursor-pointer w-full border-none bg-transparent text-left font-[inherit]"
+        class="flex items-center gap-3 px-4 py-3 text-sm text-slate-700 hover:bg-blue-50 transition-colors cursor-pointer w-full border-none bg-transparent text-left font-[inherit]"
         @mousedown.prevent="showProfileDetails"
       >
         <svg class="text-slate-500 shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -47,7 +47,7 @@
       </button>
 
       <button
-        class="flex items-center gap-3 px-4 py-3 text-sm text-slate-700 hover:bg-purple-50 transition-colors cursor-pointer w-full border-none bg-transparent text-left font-[inherit]"
+        class="flex items-center gap-3 px-4 py-3 text-sm text-slate-700 hover:bg-blue-50 transition-colors cursor-pointer w-full border-none bg-transparent text-left font-[inherit]"
         @mousedown.prevent="showTasks"
       >
         <svg class="text-slate-500 shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -55,7 +55,7 @@
           <path d="M6 7L8 9L12 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         {{ t('profile.myTasks') }}
-        <span v-if="pendingTaskCount > 0" class="ml-auto bg-violet-400 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">{{ pendingTaskCount }}</span>
+        <span v-if="pendingTaskCount > 0" class="ml-auto bg-blue-400 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">{{ pendingTaskCount }}</span>
       </button>
 
       <div class="h-px bg-slate-200 my-1"></div>
